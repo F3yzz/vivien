@@ -1,0 +1,261 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #FCD3DB;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Toggle Navigation */
+.toggle-navigation {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: sticky;
+    top: 0;
+    background-color: #f9f7f4;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.toggle-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.toggle-btn.active {
+    background-color: #3d5a80;
+    color: white;
+}
+
+/* Page styles */
+.page {
+    display: none;
+    animation: fadein 0.5s;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.introducing {
+    display: block;
+    color: #e63946;
+    font-family: cursive;
+    font-size: 24px;
+    margin-bottom: -5px;
+}
+
+.formula-text {
+    color: #3d5a80;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.subtitle-box {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-top: 10px;
+}
+
+.subtitle-box p {
+    font-size: 14px;
+}
+
+/* Highlights section */
+.highlights {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.highlight-item {
+    flex: 1;
+}
+
+.highlight-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.highlight-subtitle {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.highlight-blue {
+    color: #3d5a80;
+}
+
+/* Content items */
+.content-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+.image-container {
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.content-description {
+    padding: 0 10px;
+}
+
+.content-description h3 {
+    color: #3d5a80;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.content-description p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* Description text */
+.description {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 14px;
+    padding: 15px;
+    background-color: #f0f5ff;
+    border-radius: 5px;
+}
+
+/* Museum list styling */
+.museum-list {
+    margin-bottom: 30px;
+}
+
+.museum-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.museum-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.museum-content {
+    padding: 0 10px;
+}
+
+.museum-number {
+    color: #e63946;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.museum-name {
+    color: #3d5a80;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.museum-description {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.museum-location {
+    font-style: italic;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .content-item {
+        flex-direction: row;
+    }
+    
+    .image-container {
+        flex: 1;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    
+    .content-description {
+        flex: 2;
+    }
+    
+    .museum-item {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .museum-image {
+        flex: 1;
+        margin-right: 20px;
+    }
+    
+    .museum-content {
+        flex: 2;
+    }
+}
